@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+
+{% block main_page %}
+
+<div class="Qub_perimetr" >
+     <h5>Вам дан куб со стороной 31 сантиметр, найдите периметр куба и напишите ответ специальное поле</h5>
+        <div class="login_form new_post" >
+            <form action="" class="form_sign_in" enctype="multipart/form-data" method="POST">
+
+
+                {{ QubPerimeterForm.hidden_tag() }}
+
+                <legend class="legend">{{ legend }}</legend>
+
+
+                <div class="invalid-feedback">
+                    {% for errors in QubPerimeterForm.answer.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+
+                {{ QubPerimeterForm.answer(class='form-post-title', placeholder='Введите периметр куба') }}
+
+                {{ QubPerimeterForm.submit(class='btn_new_post') }}
+
+                <div>
+                </div>
+            </form>
+        </div>
+
+
+
+</div>
+
+{% endblock main_page %}

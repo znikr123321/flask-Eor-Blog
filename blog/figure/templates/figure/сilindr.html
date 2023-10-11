@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block main_page %}
+
+<div class="wrapper">
+
+    <div class="cascade_block">
+
+        <div class="cascade_menu">
+            <p class="info_name">Выберите операцию</p>
+
+            <div class="cascade_block_li">
+                <ul>
+                    <li class="checkmark"><a href="{{ url_for('figures.cilindr_value') }}">Объем цилиндра</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock main_page %}

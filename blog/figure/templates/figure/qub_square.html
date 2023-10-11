@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+
+{% block main_page %}
+
+<div class="Qub_perimetr">
+     <h5>Введите значение стороны куба </h5>
+        <div class="login_form new_post" >
+            <form action="" class="form_sign_in" enctype="multipart/form-data" method="POST">
+
+
+                {{ QubSquareForm.hidden_tag() }}
+
+                <legend class="legend">{{ legend }}</legend>
+
+
+                <div class="invalid-feedback">
+                    {% for errors in QubSquareForm.side.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+
+                {{ QubSquareForm.side(class='form-post-title', placeholder='Введите сторону куба') }}
+
+                {{ QubSquareForm.submit(class='btn_new_post') }}
+
+                <div>
+                    <p>Площадь поверхности куба: {{Square}}</p>
+                </div>
+            </form>
+        </div>
+
+
+
+</div>
+
+{% endblock main_page %}

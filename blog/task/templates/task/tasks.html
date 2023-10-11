@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block main_page %}
+
+<div class="wrapper">
+
+    <div class="cascade_block">
+
+        <div class="cascade_menu">
+            <p class="info_name">Выберите фигуру</p>
+
+            <div class="cascade_block_li">
+                <ul>
+                    <li class="checkmark"><a href="{{ url_for('tasks.qub_ValueTask') }}">Вычислить объем куба</a></li>
+                    <li class="checkmark"><a href="{{ url_for('tasks.qub_PerimetrTask') }}">Вычислить периметр куба</a></li>
+                    <li class="checkmark"><a href="{{ url_for('tasks.qub_SquareTask') }}">Вычислить площадь поверхности куба</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock main_page %}

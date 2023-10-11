@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+
+{% block main_page %}
+<div class="Qub_perimetr" >
+     <h5>Чему равна площадь куба со стороной 12 см </h5>
+        <div class="login_form new_post" >
+            <form action="" class="form_sign_in" enctype="multipart/form-data" method="POST">
+
+
+                {{ QubPerimeterTestForm.hidden_tag() }}
+
+                <legend class="legend">{{ legend }}</legend>
+
+
+                <div class="invalid-feedback">
+                    {% for errors in QubPerimeterTestForm.question1.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                <div class="invalid-feedback">
+                    {% for errors in QubPerimeterTestForm.question2.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                <div class="invalid-feedback">
+                    {% for errors in QubPerimeterTestForm.question3.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+
+                <p>{{ QubPerimeterTestForm.question1}}100</p>
+                <p>{{ QubPerimeterTestForm.question2}}110</p>
+                <p>{{ QubPerimeterTestForm.question3}}112</p>
+
+                {{ QubPerimeterTestForm.submit(class='btn_new_post') }}
+            </form>
+        </div>
+</div>
+
+{% endblock main_page %}

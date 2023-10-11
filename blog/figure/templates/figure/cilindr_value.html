@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+
+{% block main_page %}
+
+<div class="Qub_perimetr" >
+     <h5>Введите значение площади основания и высоты цилиндра </h5>
+        <div class="login_form new_post" >
+            <form action="" class="form_sign_in" enctype="multipart/form-data" method="POST">
+
+
+                {{ CilindrValueForm.hidden_tag() }}
+
+                <legend class="legend">{{ legend }}</legend>
+
+
+                <div class="invalid-feedback">
+                    {% for errors in CilindrValueForm.Square.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                <div class="invalid-feedback">
+                    {% for errors in CilindrValueForm.Hight.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+
+                {{ CilindrValueForm.Square(class='form-post-title', placeholder='Введите площадь основания цилиндра') }}
+                {{ CilindrValueForm.Hight(class='form-post-title', placeholder='Введите высоту цилиндра') }}
+                {{ CilindrValueForm.submit(class='btn_new_post') }}
+
+                <div>
+                    <p>Объем цилиндра равен: {{Volume}}</p>
+                </div>
+            </form>
+        </div>
+
+
+
+</div>
+
+{% endblock main_page %}
